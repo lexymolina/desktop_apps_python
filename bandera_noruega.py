@@ -17,7 +17,7 @@ from tkinter import *
 ventana_principal = Tk()
 
 #titulo de la ventana
-ventana_principal.title ("Bandera de francia")
+ventana_principal.title ("Bandera de noruega")
 
 #tamaño de la ventana
 ventana_principal.geometry("800x600")
@@ -76,8 +76,6 @@ frame_azul.place(x = 0, y = 300)
 frame_azul = Frame(ventana_principal)
 frame_azul.config(bg = "navy", width = 50, height = 600)
 frame_azul.place(x = 250, y = 0)
-
-
 
 #run
 ventana_principal.mainloop()
