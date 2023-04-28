@@ -29,14 +29,14 @@ ventana_principal.resizable(False, False)
 ventana_principal.config(bg = "salmon1")
 
 #---------------------------------
-# frame amarillo
+# frame azul
 #---------------------------------
 frame_azul = Frame(ventana_principal)
 frame_azul.config(bg = "navy", width = 300, height = 450)
 frame_azul.place(x = 0, y = 0)
 
 #---------------------------------
-# frame azul
+# frame blanca
 #---------------------------------
 frame_blanca = Frame(ventana_principal)
 frame_blanca.config(bg = "white", width = 300, height = 450)
