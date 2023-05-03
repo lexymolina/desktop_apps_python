@@ -11,12 +11,31 @@ from tkinter import messagebox
 #-----------------------
 
 #sumar
-def sumar():
-    pass
+def calcular():
+    messagebox.showinfo("minicalculadora_1.0", "lasoperaciones han sido realizadas")
+    s = int(x.get()) + int(y.get())
+    r= int(x.get()) - int(y.get())
+    m = int(x.get()) * int(y.get())
+    d = int(x.get()) / int(y.get())
+    de = int(x.get()) // int(y.get())
+    mod = int(x.get()) % int(y.get())
+    p = int(x.get()) ** int(y.get())
+    t_resultados.insert(INSERT, f" {int(x.get())} + {int(y.get())} = {s} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} - {int(y.get())} = {r} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} * {int(y.get())} = {m} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} / {int(y.get())} = {d} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} // {int(y.get())} = {de} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} % {int(y.get())} = {mod} ")
+    t_resultados.insert(INSERT, f" \n{int(x.get())} ** {int(y.get())} = {p} ")
+
+    
 
 #borrar
 def borrar():
-    pass
+    messagebox.showinfo("minicalculadora_1.0", "los datos seran borrados")
+    x.set("")
+    y.set("")
+    t_resultados.delete("1.0", "end")
 
 #salir
 def salir():
@@ -31,7 +50,7 @@ def salir():
 ventana_principal = Tk()
 
 #titulo de la ventana
-ventana_principal.title ("suma_enteros")
+ventana_principal.title ("mini_calculadora_1.o")
 
 #tamaño de la ventana
 ventana_principal.geometry("500x500")
@@ -61,7 +80,7 @@ lb_logo = Label(frame_entrada, image=logo, bg="white")
 lb_logo.place(x=70, y=40)
 
 #titulo de la app
-titulo = Label(frame_entrada, text="suma enteros 1.0")
+titulo = Label(frame_entrada, text="mini calculadora 1.0")
 titulo.config(bg="blue", fg="white", font=("arial", 16))
 titulo.place(x=240, y=10)
 
@@ -93,12 +112,12 @@ frame_operaciones = Frame(ventana_principal)
 frame_operaciones.config(bg = "white", width = 480, height = 100)
 frame_operaciones.place(x = 10, y = 200)
 
-#boton para sumar
-bt_sumar = Button (frame_operaciones, text="sumar")
-bt_sumar.place(x=45, y=35, width=100, height=30)
+#boton para calcular
+bt_calcular = Button (frame_operaciones, text="calcular", command=calcular)
+bt_calcular.place(x=45, y=35, width=100, height=30)
 
 #boton para borrar
-bt_borrar = Button (frame_operaciones, text="borrar")
+bt_borrar = Button (frame_operaciones, text="borrar", command=borrar)
 bt_borrar.place(x=190, y=35, width=100, height=30)
 
 # boton para salir
